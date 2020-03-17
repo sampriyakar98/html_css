@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS demo 1</title>
+</head>
+
+<body>
+    <div>
+        First_Number:
+        <input type="text" name="fno" id="fno">
+        <br>
+        <br>
+        <br> Second_Number:
+        <input type="text" name="sno" id="sno">
+        <br>
+        <br>
+        <button type="button" onclick="com(1)">Addition</button>
+        <button type="button" onclick="com(2)">Substraction</button>
+        <button type="button" onclick="com(3)">Multiplication</button>
+        <button type="button" onclick="com(4)">Division</button>
+        <h3 id="a"></h3>
+    </div>
+    <script>
+        function com(n) {
+            switch (n) {
+                case 1:
+                    {
+                        var a = parseInt(document.getElementById('fno').value);
+                        var b = parseInt(document.getElementById('sno').value);
+                        var c = a + b;
+                        document.getElementById("a").innerHTML = c;
+                        break;
+                    }
+                case 2:
+                    {
+                        var a = document.getElementById('fno').value;
+                        var b = document.getElementById('sno').value;
+                        var c = a - b;
+                        document.getElementById("a").innerHTML = c;
+                        break;
+                    }
+                case 3:
+                    {
+                        var a = parseInt(document.getElementById('fno').value);
+                        var b = parseInt(document.getElementById('sno').value);
+                        var c = a * b;
+                        document.getElementById("a").innerHTML = c;
+                        break;
+                    }
+                case 4:
+                    {
+                        var a = parseInt(document.getElementById('fno').value);
+                        var b = parseInt(document.getElementById('sno').value);
+                        var c = a / b;
+
+                        document.getElementById("a").innerHTML = c;
+                        break;
+                    }
+            }
+        }
+    </script>

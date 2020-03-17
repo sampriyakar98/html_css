@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous" />
+    <!-- <link rel="stylesheet" href="./css/styles.css" /> -->
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-6 offset-3 bg-white">
+                <form action="" name="demoForm">
+                    <div class="form-group">
+                        <label for="name">Username</label>
+                        <input type="text" name="name" id="userName" class="form-control" placeholder="Please provide a username." onblur="checkName()" />
+                    </div>
+                    <div class="form-group">
+                        <label for="dob">Date_Of_Birth</label>
+                        <input type="text" name="dob" id="dob" class="form-control" placeholder="Please provide your Date Of Birth." onblur="checkdate()" />
+                        <button type="button" onclick="age()">Age_Check</button>
+                    </div>
+                </form>
+                <script>
+                    function checkName() {
+                        var userName = document.demoForm.userName.value;
+
+                        var expression = /^[A-Za-z ]+$/
+
+                        if (expression.test(userName)) {
+                            console.log('Valid name')
+                        } else {
+                            console.log('invalid name....')
+                            alert("invalid name....");
+                        }
+                        if (expression == "") {
+                            alert("Please Enter Your Name");
+                        }
+
+                    }
+
+                    function checkdate() {
+                        var dt = document.demoForm.dob.value;
+
+                        var dateformat = /^(0?[1-9]|[12][0-9]|3[01])[\/\-](0?[1-9]|1[012])[\/\-]\d{4}$/;
+                        if (dateformat.test(dt)) {
+                            console.log('Valid date');
+                        } else {
+                            console.log("invalid");
+                        }
+                    }
+                </script>

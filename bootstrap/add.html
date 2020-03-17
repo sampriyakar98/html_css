@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS demo 1</title>
+</head>
+
+<body>
+    <div>
+        First_Number: <input type="text" name="fno" id="fno"> <br><br><br> Second_Number: <input type="text" name="sno" id="sno"><br><br>
+        <button type="button" onclick="add()">Addition</button>
+        <input id="a"><br><br>
+        <button type="button" onclick="sub()">Substraction</button>
+
+        <input id="b">
+        <br><br>
+        <button type="button" onclick="mul()">Multiplication</button>
+
+        <input id="c">
+        <br><br>
+        <button type="button" onclick="div()">Multiplication</button>
+
+        <input id="d">
+
+    </div>
+    <script>
+        function add() {
+            var a = parseInt(document.getElementById('fno').value);
+            var b = parseInt(document.getElementById('sno').value);
+            var c = a + b;
+            document.getElementById("a").value = c;
+        }
+
+        function sub() {
+            var a = document.getElementById('fno').value;
+            var b = document.getElementById('sno').value;
+            var c = a - b;
+            document.getElementById("b").value = c;
+        }
+
+        function mul() {
+            var a = parseInt(document.getElementById('fno').value);
+            var b = parseInt(document.getElementById('sno').value);
+            var c = a * b;
+            document.getElementById("c").value = c;
+        }
+
+        function div() {
+            var a = parseInt(document.getElementById('fno').value);
+            var b = parseInt(document.getElementById('sno').value);
+            var c = a / b;
+            document.getElementById("d").value = c;
+        }
+    </script>
+</body>
+
+</html>
