@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS demo 1</title>
+</head>
+
+<body>
+    <div>
+        Number: <input type="text" name="fno" id="fno"> <br><br><br>
+        Random generated integer:<h2 id="random"></h2>
+        <button type="button" onclick="fun()">check</button>
+        <h3 id="result"></h3>
+        <script>
+            function fun() {
+                document.getElementById("random").innerHTML=Math.floor(Math.random()*10)+1;
+                var a=document.getElementById("random").value;
+                if(a==document.getElementById("fno").value){
+                    document.getElementById("result").innerHTML="good work";
+                }
+                else{
+                    document.getElementById("result").innerHTML="not matched";
+                }
+            }
+        </script>
+        </div>
+        </body>
+        </html>

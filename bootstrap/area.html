@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS demo 1</title>
+</head>
+
+<body>
+    <div>
+        First_Length: <input type="text" name="fno" id="fno"> <br><br><br>
+        Second_Length: <input type="text" name="sno" id="sno"><br><br><br>
+        Third_Length: <input type="text" name="tno" id="tno"><br><br><br>
+        <button type="button" onclick="area()">Area</button>
+        <h3 id="a"></h3><br><br>
+    </div>
+    <script>
+        function area() {
+            var a = parseInt(document.getElementById('fno').value);
+            var b = parseInt(document.getElementById('sno').value);
+            var c = parseInt(document.getElementById('tno').value);
+            if(a==b==c)
+            {
+                var d= Math.sqrt(3) / 4;
+                var area=d*a*a;
+            }
+            else{
+            var s = (a + b+ c)/2;
+            var area =  Math.sqrt(s*((s-a)*(s-b)*(s-c)));
+            }
+            document.write(area);
+
+        }
+    </script>
+</body>
