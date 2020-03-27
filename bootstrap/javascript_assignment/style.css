@@ -1,0 +1,18 @@
+.m-top-50{
+    margin-top: 20px;
+}
+.form-border{
+    border: .8px solid grey;
+    background-color: #00c5cc;
+
+}
+.p-10{
+    padding: 10px;
+}
+body{
+    background-color: lightgoldenrodyellow;
+}
+.display{
+    text-align: center;
+    font-size: x-large;
+}
